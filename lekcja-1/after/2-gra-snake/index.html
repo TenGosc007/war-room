@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SNAKE — pierwsza gra</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Courier New", monospace;
+    background: #0d1117;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+  }
+  h1 { letter-spacing: 6px; margin-bottom: 4px; }
+  .score { font-size: 20px; margin-bottom: 16px; color: #8b949e; }
+  .score b { color: #3fb950; }
+  canvas {
+    border: 3px solid #30363d;
+    border-radius: 8px;
+    background: #0d1117;
+    box-shadow: 0 0 40px rgba(63, 185, 80, 0.15);
+  }
+  .controls { color: #8b949e; }
+  .cheats {
+    margin-top: 24px;
+    max-width: 640px;
+    border: 2px dashed #3fb950;
+    border-radius: 12px;
+    padding: 16px 24px;
+    background: rgba(63, 185, 80, 0.06);
+  }
+  .cheats h3 { margin-top: 0; color: #3fb950; }
+  .cheats table { width: 100%; border-collapse: collapse; }
+  .cheats td { padding: 6px 8px; border-top: 1px solid #21262d; font-size: 14px; }
+  .cheats td:first-child { color: #79c0ff; font-weight: bold; white-space: nowrap; }
+  code { background: #161b22; padding: 2px 8px; border-radius: 4px; color: #79c0ff; }
+</style>
+</head>
+<body>
+
+<h1>SNAKE</h1>
+<div class="score">Punkty: <b id="score">0</b> &nbsp;|&nbsp; Rekord: <b id="best">0</b></div>
+<canvas id="game" width="420" height="420"></canvas>
+<p class="controls">Sterowanie: strzałki lub WASD &nbsp;•&nbsp; Spacja = restart</p>
+
+<div class="cheats">
+  <h3>CHEAT MENU</h3>
+  <p>Otwórz plik <code>snake.js</code> w edytorze. Na samej górze jest sekcja
+  <b>USTAWIENIA</b> — zmień wartość, zapisz (Ctrl+S / Cmd+S) i odśwież stronę (F5).</p>
+  <table>
+    <tr><td>SPEED</td><td>szybkość węża — <b>mniej = szybciej</b> (spróbuj 50, albo 300 dla ślimaka)</td></tr>
+    <tr><td>START_SCORE</td><td>z ilu punktów zaczynasz (wpisz 9999 — klasyczny cheat)</td></tr>
+    <tr><td>GROWTH</td><td>o ile wąż rośnie po zjedzeniu (5 = mega wąż)</td></tr>
+    <tr><td>WALLS_KILL</td><td>zmień na <code>false</code> = przechodzisz przez ściany (god mode)</td></tr>
+    <tr><td>POINTS_PER_FOOD</td><td>ile punktów za jedzenie (100 = speedrun rekordu)</td></tr>
+    <tr><td>SNAKE_COLOR / FOOD_COLOR</td><td>kolory — "red", "blue", "#ff00ff"</td></tr>
+    <tr><td>GRID</td><td>wielkość planszy (mniej = ciaśniej i trudniej)</td></tr>
+  </table>
+</div>
+
+<script src="snake.js"></script>
+</body>
+</html>

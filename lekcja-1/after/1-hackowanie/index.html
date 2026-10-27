@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profil Gracza — ProGamer_2013</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Courier New", monospace;
+    background: #0d1117;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    transition: background 0.3s;
+  }
+  h1 { letter-spacing: 4px; margin-bottom: 8px; }
+  .subtitle { color: #8b949e; margin-bottom: 32px; }
+  .card {
+    background: #161b22;
+    border: 2px solid #30363d;
+    border-radius: 12px;
+    padding: 24px 48px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(88, 166, 255, 0.15);
+  }
+  .card h2 { margin-top: 0; color: #58a6ff; }
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    font-size: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid #30363d;
+  }
+  .stat:last-child { border-bottom: none; }
+  .stat b { color: #3fb950; }
+  #vbucks { color: #f0b429; }
+  .mission {
+    margin-top: 32px;
+    max-width: 560px;
+    border: 2px dashed #f0b429;
+    border-radius: 12px;
+    padding: 20px 24px;
+    background: rgba(240, 180, 41, 0.08);
+    line-height: 1.7;
+  }
+  .mission h3 { margin: 0 0 8px; color: #f0b429; }
+  .panel { margin-top: 32px; max-width: 560px; text-align: center; }
+  .panel h3 { color: #8b949e; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  button {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #58a6ff;
+    background: transparent;
+    color: #58a6ff;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  button:hover { background: #58a6ff; color: #0d1117; }
+  code { background: #161b22; padding: 2px 8px; border-radius: 4px; color: #79c0ff; }
+  body.light { background: #f5f5f5; color: #222; }
+  body.light .card { background: #fff; border-color: #ccc; }
+</style>
+</head>
+<body>
+
+<h1>PROFIL GRACZA</h1>
+<p class="subtitle">official epic stats — totally real</p>
+
+<div class="card">
+  <h2 id="nick">ProGamer_2013</h2>
+  <div class="stat"><span>Level</span><b id="level">37</b></div>
+  <div class="stat"><span>V-Bucks</span><b id="vbucks">1,250</b></div>
+  <div class="stat"><span>Wygrane</span><b id="wins">42</b></div>
+  <div class="stat"><span>K/D</span><b id="kd">1.80</b></div>
+</div>
+
+<div class="mission">
+  <h3>MISJA #1 — ZHAKUJ PROFIL</h3>
+  1. Kliknij <b>prawym przyciskiem</b> na liczbę V-Bucks i wybierz <b>Zbadaj / Inspect</b>.<br>
+  2. W kodzie, który się podświetli, kliknij <b>dwa razy</b> na liczbę.<br>
+  3. Wpisz <code>999999</code> i naciśnij Enter.<br>
+  4. Zrób screena i pokaż znajomym — właśnie "zhakowałeś" stronę.
+</div>
+
+<div class="panel">
+  <h3>MISJA #2 — PRAWDZIWY KOD</h3>
+  <p>Te przyciski robią to samo co DevTools — ale <b>kodem JavaScript</b>:</p>
+  <div class="buttons">
+    <button onclick="sayHello()">alert("Siema!")</button>
+    <button onclick="changeNick()">Zmień nick</button>
+    <button onclick="randomBg()">Losowy kolor tła</button>
+    <button onclick="hackVbucks()">HACK: V-Bucks = 999999</button>
+    <button onclick="toggleLight()">Tryb jasny/ciemny</button>
+  </div>
+  <p style="margin-top: 24px">Naciśnij <b>F12 → Console</b> — zostawiłem tam wiadomość.</p>
+</div>
+
+<script>
+  // ============================================================
+  //  TWÓJ PIERWSZY JAVASCRIPT
+  //  Każdy przycisk wyżej uruchamia funkcję z tego pliku.
+  //  Żeby zobaczyć ten kod na stronie: prawy przycisk →
+  //  "Wyświetl źródło strony" (View Source).
+  // ============================================================
+
+  function sayHello() {
+    alert("Siema! To twój pierwszy kod.");
+  }
+
+  function changeNick() {
+    const nick = prompt("Podaj swój nick:");
+    if (nick) {
+      document.getElementById("nick").textContent = nick;
+    }
+  }
+
+  function randomBg() {
+    const colors = ["#0d1117", "#4c1d95", "#065f46", "#7f1d1d", "#1e3a8a", "#831843"];
+    const random = Math.floor(Math.random() * colors.length);
+    document.body.style.background = colors[random];
+  }
+
+  function hackVbucks() {
+    document.getElementById("vbucks").textContent = "999,999";
+    console.log("HACK wykonany: V-Bucks = 999999");
+  }
+
+  function toggleLight() {
+    document.body.classList.toggle("light");
+  }
+
+  console.log("Hej, znalazłeś konsolę!");
+  console.log("Wpisz tutaj: document.title = 'HACKED' i patrz na zakładkę przeglądarki.");
+</script>
+
+</body>
+</html>
