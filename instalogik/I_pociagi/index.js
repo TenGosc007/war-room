@@ -35,7 +35,7 @@ function connectWagons(wagons) {
 }
 
 if (require.main === module) {
-  var result = connectWagons([1, 2, 3, 6, 5, 4]);
+  var result = connectWagons([1, 3, 2, 1, 3]);
   console.log("========= connectWagons =========");
   console.log("locomotiveA", result[0], "length:", sum(result[0]));
   console.log("locomotiveB", result[1], "length:", sum(result[1]));

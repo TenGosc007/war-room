@@ -1,9 +1,14 @@
+// Import zewntętrznych bibliotek
 const prompt = require("prompt-sync")();
 
+// Definicja stałych
 const wylosowanaLiczba = Math.round(Math.random() * 100) + 1;
+
+// Definicja zminnych
 let liczbaProb = 0;
 let strzal;
 
+// Definicja funkcji
 function print(text) {
   if (typeof window == "undefined") {
     console.log(text);
@@ -28,4 +33,5 @@ function zgaduj() {
   zgaduj();
 }
 
+// wywołanie funkcji
 zgaduj();
