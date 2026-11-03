@@ -1,0 +1,12 @@
+{
+  "name": "warunki",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node if.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}

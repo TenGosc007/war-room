@@ -1,0 +1,12 @@
+{
+  "name": "zmienne",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node var.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}
