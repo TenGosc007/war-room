@@ -7,6 +7,12 @@
 function czyMozeWejsc(wiek, jestZRodzicem) {
   // TODO: Na film można wejść, gdy wiek >= 13 LUB gdy jest z rodzicem.
   // Zwróć true albo false. Użyj if / else i operatora ||
+
+  if (wiek >= 13 || jestZRodzicem) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function ocenWynik(punkty) {

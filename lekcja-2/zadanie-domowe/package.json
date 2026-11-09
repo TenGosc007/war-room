@@ -1,0 +1,12 @@
+{
+  "name": "zadanie-domowe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node pojedynek.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}
