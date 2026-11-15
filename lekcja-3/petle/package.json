@@ -1,0 +1,12 @@
+{
+  "name": "petle",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node petle.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}
