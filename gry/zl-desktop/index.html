@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
-    <title>ZL Desktop</title>
+    <title>Zgadnij liczbę</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="app">
-      <p class="eyebrow">Electron</p>
-      <h1>ZL Desktop</h1>
-      <p class="description">Prosta aplikacja desktopowa gotowa do dalszej rozbudowy.</p>
-      <button id="show-versions" type="button">Pokaż wersje</button>
-      <p id="versions" class="versions" aria-live="polite"></p>
+      <p class="eyebrow">Gra</p>
+      <h1>Zgadnij liczbę</h1>
+      <p class="description">Wylosowałem liczbę od 1 do 10. Masz tylko 3 próby.</p>
+
+      <form id="guess-form" class="guess-form">
+        <label for="guess">Twoja liczba</label>
+        <div class="controls">
+          <input id="guess" name="guess" type="number" min="1" max="10" step="1" autocomplete="off" required>
+          <button type="submit">Sprawdź</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" aria-live="polite">Wpisz liczbę i sprawdź, czy trafisz.</p>
+      <p id="attempts" class="attempts">Pozostałe próby: 3</p>
+      <button id="restart" class="restart" type="button" hidden>Zagraj ponownie</button>
     </main>
     <script src="renderer.js"></script>
   </body>

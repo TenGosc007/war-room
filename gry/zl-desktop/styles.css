@@ -33,7 +33,7 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(42px, 8vw, 72px);
+  font-size: clamp(40px, 8vw, 68px);
   line-height: 1;
 }
 
@@ -45,25 +45,82 @@ h1 {
   line-height: 1.6;
 }
 
+.guess-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 16px;
+  color: #f8fafc;
+  font: inherit;
+  border: 1px solid #475569;
+  border-radius: 14px;
+  outline: none;
+  background: #0f172a;
+}
+
+input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+}
+
 button {
-  padding: 12px 20px;
+  padding: 13px 20px;
   color: #082f49;
   font: inherit;
   font-weight: 800;
   border: 0;
-  border-radius: 999px;
+  border-radius: 14px;
   background: #7dd3fc;
   cursor: pointer;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   background: #bae6fd;
 }
 
-.versions {
-  min-height: 24px;
-  margin: 24px 0 0;
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.message {
+  min-height: 48px;
+  margin: 26px 0 8px;
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.message.success {
+  color: #86efac;
+}
+
+.message.error {
+  color: #fca5a5;
+}
+
+.message.hint {
+  color: #fde68a;
+}
+
+.attempts {
+  margin: 0;
   color: #94a3b8;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 13px;
+  font-weight: 700;
+}
+
+.restart {
+  margin-top: 24px;
 }
