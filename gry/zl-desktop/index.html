@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+    <title>ZL Desktop</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <p class="eyebrow">Electron</p>
+      <h1>ZL Desktop</h1>
+      <p class="description">Prosta aplikacja desktopowa gotowa do dalszej rozbudowy.</p>
+      <button id="show-versions" type="button">Pokaż wersje</button>
+      <p id="versions" class="versions" aria-live="polite"></p>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>
